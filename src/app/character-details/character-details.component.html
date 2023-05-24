@@ -1,0 +1,22 @@
+<div class="container">
+
+  <div class="row">
+    <div class="col-4">
+      <img class="img-fluid" src="{{ character.image }}" alt="Card image cap" />
+    </div>
+    <div class="col-8">
+      <div class="card-body">
+        <h5 class="card-title">{{ character.name | uppercase }}</h5>
+        <p class="card-title">Status: {{ character.status }}</p>
+        <p class="card-title">Species: {{ character.species }}</p>
+        <p class="card-title">Gender: {{ character.gender }}</p>
+        <p class="card-title">Origin: {{ character.origin.name }}</p>
+        <p class="card-title">Location: {{ character.location.name }}</p>
+        <br>
+        <button class="btn btn-warning" (click)="backToCharacters()">Back</button>
+        <button class="btn btn-success mt-1 ms-2" (click)="modifyChar(character.id)">Modify</button>
+        <button class="btn btn-danger" (click)="deleteCharacter()">Delete</button>
+      </div>
+    </div>
+  </div>
+</div>
